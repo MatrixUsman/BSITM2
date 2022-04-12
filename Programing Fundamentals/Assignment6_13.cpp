@@ -5,6 +5,8 @@ using namespace std;
 
 int main()
 {
+    std::cout << "Name:    Muhammad Usman Razwan" << std::endl;
+    std::cout << "Roll no:    BSIT-M2-20-48" << std::endl;
     // Variable Declaration
     int a;
     int b;

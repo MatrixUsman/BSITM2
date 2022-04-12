@@ -20,6 +20,8 @@ void* fun(void*)
 
 int main()
 {
+        cout << "Name:    Muhammad Usman Razwan" << endl;
+        cout << "Roll no:    BSIT-M2-20-48" << endl;
   pthread_t t[4];
   for(int i=0; i<4; i++)
   {

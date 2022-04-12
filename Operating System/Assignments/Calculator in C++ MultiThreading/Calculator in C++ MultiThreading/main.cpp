@@ -9,6 +9,8 @@
 using namespace std;
 int main ()
 {
+          cout << "Name:    Muhammad Usman Razwan" << endl;
+        cout << "Roll no:    BSIT-M2-20-48" << endl;
 float a,b,PI;
 int c;
 cout<<endl;

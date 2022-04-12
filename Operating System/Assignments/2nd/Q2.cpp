@@ -5,20 +5,21 @@
 //  Created by Usman Razwan on 14/3/22.
 //
 
-#include<stdlib.h>
-#include<stdio.h>
+#include <stdlib.h>
+#include <stdio.h>
 #include "iostream"
 using namespace std;
-struct bin_tree {
-int data;
-struct bin_tree * right, * left;
+struct bin_tree
+{
+    int data;
+    struct bin_tree *right, *left;
 };
 typedef struct bin_tree btree_t;
 
-int insert(btree_t ** t, int value)
+int insert(btree_t **t, int value)
 {
     btree_t *temp = NULL;
-    if(!(*t))
+    if (!(*t))
     {
         temp = (btree_t *)malloc(sizeof(btree_t));
         temp->left = temp->right = NULL;
@@ -26,12 +27,12 @@ int insert(btree_t ** t, int value)
         *t = temp;
         return 1;
     }
-    if(value < (*t)->data)
+    if (value < (*t)->data)
     {
         insert(&(*t)->left, value);
         return 1;
     }
-    else if(value > (*t)->data)
+    else if (value > (*t)->data)
     {
         insert(&(*t)->right, value);
         return 1;
@@ -40,28 +41,29 @@ int insert(btree_t ** t, int value)
         return 0;
 }
 
-int btree_remove_node (btree_t *t, int value){
-    if(!t)
+int btree_remove_node(btree_t *t, int value)
+{
+    if (!t)
         return 0;
-    if(value < t->data)
+    if (value < t->data)
         return btree_remove_node(t->left, value);
-    else if(value > t->data)
+    else if (value > t->data)
         return btree_remove_node(t->right, value);
     else
     {
-        if(!t->left && !t->right)
+        if (!t->left && !t->right)
         {
             free(t);
             return 1;
         }
-        else if(!t->left)
+        else if (!t->left)
         {
             btree_t *temp = t;
             t = t->right;
             free(temp);
             return 1;
         }
-        else if(!t->right)
+        else if (!t->right)
         {
             btree_t *temp = t;
             t = t->left;
@@ -71,52 +73,63 @@ int btree_remove_node (btree_t *t, int value){
         else
         {
             btree_t *temp = t->left;
-            while(temp->right)
+            while (temp->right)
                 temp = temp->right;
             t->data = temp->data;
             btree_remove_node(t->left, temp->data);
             return 1;
         }
     }
-   
 }
-btree_t* search(btree_t ** tree, int val) {
-    if(!(*tree)) {
+btree_t *search(btree_t **tree, int val)
+{
+    if (!(*tree))
+    {
         return NULL;
     }
 
-    if(val < (*tree)->data) {
+    if (val < (*tree)->data)
+    {
         return search(&((*tree)->left), val);
     }
-    else if(val > (*tree)->data) {
+    else if (val > (*tree)->data)
+    {
         return search(&((*tree)->right), val);
     }
-    else if(val == (*tree)->data) {
+    else if (val == (*tree)->data)
+    {
         return *tree;
     }
     else
         return *tree;
 }
 
-int main() {
+int main()
+{
+
+    cout << "Name:    Muhammad Usman Razwan" << endl;
+    cout << "Roll no:    BSIT-M2-20-48" << endl;
     btree_t *root;
     btree_t *tmp;
-    
+
     root = NULL;
-    if (insert(&root, 2) == 1 && insert(&root, 9) ==1 && insert(&root, 4) ==1
-        && insert(&root, 15) == 1 && insert(&root, 6) == 1 && insert(&root, 12) ==1 && insert(&root, 17) == 1){
-        cout<<"Inseted Values Sucessfully in tree."<<endl;
+    if (insert(&root, 2) == 1 && insert(&root, 9) == 1 && insert(&root, 4) == 1 && insert(&root, 15) == 1 && insert(&root, 6) == 1 && insert(&root, 12) == 1 && insert(&root, 17) == 1)
+    {
+        cout << "Inseted Values Sucessfully in tree." << endl;
     }
     else
-        cout<<"Could not insert values into tree."<<endl;
+        cout << "Could not insert values into tree." << endl;
 
     btree_remove_node(root, 15);
-    cout<<"Removed an element."<<endl;
-    
+    cout << "Removed an element." << endl;
+
     tmp = search(&root, 9);
-    if (tmp) {
-        cout<<"Searched node= "<<tmp->data<<endl;
+    if (tmp)
+    {
+        cout << "Searched node= " << tmp->data << endl;
     }
-    else {
-        cout<<"Data Not found in tree."<<endl;
-    }}
+    else
+    {
+        cout << "Data Not found in tree." << endl;
+    }
+}

@@ -20,7 +20,8 @@ unsigned int __stdcall mythread(void* data)
 
 int main(int argc, char* argv[])
 {
-    HANDLE myhandle[2];
+    HANDLE myhandle[2];      cout << "Name:    Muhammad Usman Razwan" << endl;
+        cout << "Roll no:    BSIT-M2-20-48" << endl;
 
     myhandle[0] = (HANDLE)_beginthreadex(0, 0, &mythread, 0, 0, 0);
     myhandle[1] = (HANDLE)_beginthreadex(0, 0, &mythread, 0, 0, 0);

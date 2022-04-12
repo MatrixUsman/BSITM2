@@ -3,7 +3,8 @@
 #include <iostream>
 using namespace std;
 int main()
-{
+{  std::cout << "Name:    Muhammad Usman Razwan" << std::endl;
+    std::cout << "Roll no:    BSIT-M2-20-48" << std::endl;
     string name;
     int age, marks;
     float percent;

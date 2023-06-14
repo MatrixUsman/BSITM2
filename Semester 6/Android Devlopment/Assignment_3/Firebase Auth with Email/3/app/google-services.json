@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "839503570521",
+    "project_id": "firbase-auth-using-email",
+    "storage_bucket": "firbase-auth-using-email.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:839503570521:android:94c19b2d9673262d50b348",
+        "android_client_info": {
+          "package_name": "com.usman.bsit_m2_20_48"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "839503570521-fn05lugovco1trja29c2imhasf739g60.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZAHyFxvanQBaI6L_llLoUudaZYa1w9BQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "839503570521-fn05lugovco1trja29c2imhasf739g60.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

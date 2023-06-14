@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity
                 fragment = new SignInFragment();
                 break;
             case R.id.nav_signup:
-                fragment = new SignUpFragment();
+                fragment = new SignupFragment();
                 break;
             case R.id.nav_shared_pref:
                 fragment = new SharedFragment();

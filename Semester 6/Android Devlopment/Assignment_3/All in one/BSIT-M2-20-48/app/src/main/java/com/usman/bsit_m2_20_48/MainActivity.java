@@ -61,11 +61,14 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_home:
                 fragment = new HomeFragment();
                 break;
-            case R.id.nav_gallery:
+            case R.id.nav_login:
                 fragment = new SignInFragment();
                 break;
-            case R.id.nav_settings:
+            case R.id.nav_signup:
                 fragment = new SignUpFragment();
+                break;
+            case R.id.nav_shared_pref:
+                fragment = new SharedFragment();
                 break;
         }
 

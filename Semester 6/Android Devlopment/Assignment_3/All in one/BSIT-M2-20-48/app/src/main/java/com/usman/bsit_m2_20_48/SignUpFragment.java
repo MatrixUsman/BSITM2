@@ -21,8 +21,9 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthInvalidUserException;
 import com.google.firebase.auth.FirebaseUser;
+import androidx.fragment.app.FragmentTransaction;
 
-public class SignupFragment extends Fragment {
+public class SignUpFragment extends Fragment {
 
     private EditText editTextFullName, editTextEmail, editTextPassword, editTextConfirmPassword,
             editTextCity, editTextContactNumber;
@@ -31,7 +32,7 @@ public class SignupFragment extends Fragment {
     private FirebaseAuth firebaseAuth;
     private DatabaseReference databaseReference;
 
-    public SignupFragment() {
+    public SignUpFragment() {
         // Required empty public constructor
     }
 
@@ -96,6 +97,9 @@ public class SignupFragment extends Fragment {
                             Toast.makeText(requireContext(), "Registration successful", Toast.LENGTH_SHORT).show();
                             // Clear the form fields after successful registration
                             clearFormFields();
+                            FragmentTransaction transaction = requireActivity().getSupportFragmentManager().beginTransaction();
+                            transaction.replace(R.id.fragment_container, new ProfileFragment());
+                            transaction.commit();
                         }
                     } else {
                         Toast.makeText(requireContext(), "Registration failed", Toast.LENGTH_SHORT).show();

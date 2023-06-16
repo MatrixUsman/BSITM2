@@ -9,5 +9,13 @@
         android:layout_height="200dp"
         android:src="@drawable/welcome"
         android:contentDescription="Welcome" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:text="Made by Muhammad Usman"
+        android:layout_marginTop="16dp" />
 
 </LinearLayout>

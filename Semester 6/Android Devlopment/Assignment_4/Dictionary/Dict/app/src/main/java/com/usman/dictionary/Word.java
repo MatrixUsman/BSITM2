@@ -1,6 +1,5 @@
 package com.usman.dictionary;
 
-// Word.java
 public class Word {
     private String word;
     private String meaning;

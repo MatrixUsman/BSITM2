@@ -16,4 +16,4 @@ While the repository is private, I am open to collaboration and contributions fr
 Please note that the materials shared in this repository are for educational purposes only. It is essential to respect the intellectual property rights and privacy of others. If you find any content that violates such rights or requires correction, kindly bring it to my attention, and appropriate action will be taken.
 
 Thank you for visiting "My University Journey" repository. Feel free to explore and benefit from the shared resources. Let's learn, collaborate, and inspire each other on our academic paths!
-
+Repo will go private priori and during exams.

@@ -1,0 +1,79 @@
+<!-- activity_reports.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textViewReportsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reports"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:padding="16dp" />
+
+    <Button
+        android:id="@+id/buttonGenerateReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewReportsTitle"
+        android:text="Generate Report" />
+
+    <LinearLayout
+        android:id="@+id/chartContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonGenerateReport"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Your chart or graph view here -->
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewTotalExpense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chartContainer"
+        android:text="Total Expense: "
+        android:textSize="18sp"
+        android:padding="16dp" />
+
+    <TextView
+        android:id="@+id/textViewTotalIncome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTotalExpense"
+        android:text="Total Income: "
+        android:textSize="18sp"
+        android:padding="16dp" />
+
+    <TextView
+        android:id="@+id/textViewAvgExpense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTotalIncome"
+        android:text="Average Expense: "
+        android:textSize="18sp"
+        android:padding="16dp" />
+
+    <TextView
+        android:id="@+id/textViewMaxExpense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewAvgExpense"
+        android:text="Maximum Expense: "
+        android:textSize="18sp"
+        android:padding="16dp" />
+
+    <TextView
+        android:id="@+id/textViewMinExpense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewMaxExpense"
+        android:text="Minimum Expense: "
+        android:textSize="18sp"
+        android:padding="16dp" />
+
+</RelativeLayout>

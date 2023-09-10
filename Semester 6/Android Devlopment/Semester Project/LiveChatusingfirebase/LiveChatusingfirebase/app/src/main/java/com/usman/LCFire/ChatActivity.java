@@ -33,7 +33,6 @@ public class ChatActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
-
         userName = getIntent().getStringExtra("username");
 
         messagesRef = FirebaseDatabase.getInstance().getReference().child("chat_messages");
